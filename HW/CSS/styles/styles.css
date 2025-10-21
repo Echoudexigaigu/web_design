@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Megrim";
+    src: url('../fonts/Megrim/Megrim-Regular.ttf') format('truetype');
+} 
+
+@font-face {
+    font-family: 'Bitcount Prop Single Ink';
+    src: url('../fonts/Bitcount_Prop_Single_Ink/BitcountPropSingleInk-VariableFont_CRSV,ELSH,ELXP,SZP1,SZP2,XPN1,XPN2,YPN1,YPN2,slnt,wght.ttf') format('truetype');
+}
+
+body {
+    background-image: url("../images/cs.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Megrim', cursive;
+    color: white;
+    text-align: center; 
+    text-indent: 2em;
+    text-shadow: 2px 2px 3px #ff0000;
+}
+  
+p{
+    font-family:'Bitcount Prop Single Ink', sans-serif;
+    color:white;
+    background-color: blue;
+    text-indent: 2em;
+    font-size: medium;
+    font-family: 'Bitcount Prop Single Ink', cursive;
+}
+
+nav{
+    font-family: 'arial', cursive;
+}
+
+ul{
+    font-family: 'arial', cursive;
+}
+
+a:visited {
+    color: violet;
+}
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+a:active {
+    color: red;
+}
+img{
+    border: 2px solid whitesmoke;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+
+li:hover {
+    color: gold;
+    font-weight: bold;
+    transition: transform 0.3s;
+    transform: scale(1.05);
+    transform-origin: left center;
+}
+
+.highlight{
+    color: gold;
+    font-weight: bold;
+}
+
+.menu {
+    height: 50px;
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+.sidebar {
+    position: relative;
+    float: left;
+    width: 15%;
+    background-color: rgba(75, 0,130, 0.5);
+    padding: 10px;
+}
+
+.content {
+    position: relative;
+    background-color: rgba(255, 251, 0, 0.2);
+    padding: 15px;
+    overflow: auto;
+}
+
+.footer {
+    clear: both;
+    background-color: rgba(108, 108, 108, 0.5);
+}
+
+#banner {
+    background-color: rgba(80, 80, 160, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px solid lightblue;
+}

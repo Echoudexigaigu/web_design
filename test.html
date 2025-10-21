@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Hometown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Megrim&display=swap" rel="stylesheet">
+  <style type="text/css">
+
+  body {
+    background-image: url("./images/Nj.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Megrim', cursive;
+  }
+
+  h1, h2 {
+    font-family: 'Megrim', cursive;
+    color: white;
+    text-align: center; 
+    text-shadow: 2px 2px 3px #ff0000;
+  }
+  
+  p{
+    text-align: center;
+    font-family:'Bitcount Prop Single Ink', sans-serif;
+    color:white;
+    background-color: lightblue;
+  }
+
+  img {
+    border: 2px solid black;
+    padding: 5px;
+    display: block;
+    margin: auto;
+  }
+
+
+  #landmark-pic{
+    border-radius: 12px;
+    box-shadow: 2px 2px 6px white;
+  }
+  #food-pic {
+    border-radius: 12px;
+    box-shadow: 2px 2px 6px yellow;
+    border-color: yellow;
+  }
+  #fact-pic {
+    border-radius: 12px;
+    box-shadow: 2px 2px 6px lightblue;
+    border-color:white;
+  }
+
+  .highlight{
+      color: gold;
+      font-weight: bold;
+  }
+
+
+
+  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Hometown</h1>
+    <p id="intro">
+      My hometown is a special place because <span class="highlight">I grow up here</span>.
+    </p>
+  </header>
+
+  <main>
+    <section class="feature">
+      <h2 class="fancy-heading">Famous Landmark</h2>
+      <p>This landmark is very popular with visitors.</p>
+      <img id="landmark-pic" src="./images/pic2.jpg" alt="Photo from my hometown" width="300">
+    </section>
+
+    <section>
+      <h2>Local Food</h2>
+      <p class="note">There’s a dish everyone should try when they come here.</p>
+      <img id="food-pic" src="./images/food.jpg" alt="Local food" width="300">
+    </section>
+
+    <section>
+      <h2 id="special-heading">Fun Fact</h2>
+      <p>Here’s a fun fact about my hometown...</p>
+      <a href="#"><url src="https://en.wikipedia.org/wiki/Taiwan" ></a>
+      <img id="fact-pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/National_Government_of_the_R.O.C.jpg/250px-National_Government_of_the_R.O.C.jpg" alt="Fun fact" width="300">
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>&copy; 2025 My Hometown</p>
+    <a href="#" class="special-link">Contact us</a>
+  </footer>
+</body>
+</html>
