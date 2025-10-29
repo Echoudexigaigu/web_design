@@ -1,0 +1,44 @@
+.hl-kamon .ring,
+.hl-kamon .pentagon {
+  fill: none;
+  stroke: #FFD700;
+  stroke-width: 6;
+}
+.hl-kamon .divider {
+  fill: none;
+  stroke: #FFD700;
+  stroke-width: 5;
+}
+
+.hl-kamon .ring-fill { 
+    fill: #000; 
+}
+
+.hl-kamon .gold {
+  fill: url(#goldGrad);
+  stroke: #FFD700;
+  stroke-width: 3;
+}
+
+.hl-kamon .name { 
+    fill:#FFD700; font: 28px/1.1 serif; letter-spacing:1px; 
+}
+.hl-kamon .initials { 
+    fill:#FFD700; font: 18px/1.1 Georgia, "Times New Roman", serif; letter-spacing:2px; opacity:.9; 
+}
+
+.hl-kamon .diamond { 
+    transition: transform .18s ease, filter .18s ease; 
+}
+.hl-kamon a.link-diamond { 
+    cursor: pointer; 
+}
+.hl-kamon a.link-diamond:hover  .diamond { 
+    filter: brightness(1.15); transform: translateY(-1px); 
+}
+.hl-kamon a.link-diamond:active .diamond { 
+    filter: brightness(.94) contrast(1.05); transform: translateY(0); 
+}
+.hl-kamon a.link-diamond:focus-visible .diamond { 
+    outline:2px dashed #FFD700; outline-offset:2px; 
+}

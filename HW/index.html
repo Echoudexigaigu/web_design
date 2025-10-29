@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./CSS/styles/styles.css">
+  <link rel="stylesheet" href="./SVG/svg.css">
   <title>Haoxuan (Steve) Lin</title>
 
   <style>
@@ -33,7 +34,7 @@
     <li><a href="./me/background.html">HTML</a></li>
     <li><a href="./CSS/background.html">CSS</a></li>
     <li><a href="./images/index.html">Raster Graphics</a></li>
-    <li>Vector Graphics</li>
+    <li><a href="./SVG/svg.html">Vector Graphics</a></li>
     <li>Website Layout</li>
     <li>Responsive Design</li>
     <li>JavaScript</li>
@@ -42,6 +43,48 @@
 
   <img src="./me/images/index/ciallo.gif" width="70%" height="70%" alt="Ciallo">
 
+  <svg width="300" height="325" viewBox="0 0 600 650" class="hl-kamon">
+    <title id="kamon-title">Haoxuan Lin — Takeda Four Diamonds Crest (Enlarged)</title>
+    <desc id="kamon-desc">
+      Four enlarged golden-ratio diamonds arranged in Takeda style without overlap, inside a yellow-stroked pentagon and circle with a black annulus background.
+    </desc>
+
+    <defs>
+      <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%"  stop-color="#fff8b8"/>
+        <stop offset="45%" stop-color="#ffd700"/>
+        <stop offset="100%" stop-color="#b8860b"/>
+      </linearGradient>
+    </defs>
+
+    <path class="ring-fill" fill-rule="evenodd"
+          d="
+          M300,300 m-240,0
+          a240,240 0 1,0 480,0
+          a240,240 0 1,0 -480,0
+          M300,70 L511,218 431,500 169,500 89,218 Z" />
+
+    <circle  cx="300" cy="300" r="240" class="ring"/>
+    <polygon class="pentagon" points="300,70 511,218 431,500 169,500 89,218"/>
+
+    <g transform="translate(300,300)">
+      <polygon class="diamond gold" points="55.9,-42.5 0,-77 -55.9,-42.5 0,-8"/>
+      <polygon class="diamond gold" points="55.9,42.5 0,8 -55.9,42.5 0,77"/>
+      <a href="https://www.nyu.edu" target="_blank" class="link-diamond left" aria-label="NYU link">
+        <polygon class="diamond gold"
+          points="-8,0 -63.9,-34.5 -119.8,0 -63.9,34.5"/>
+      </a>
+      <a href="https://github.com/Echoudexigaigu" target="_blank" class="link-diamond right" aria-label="GitHub link">
+        <polygon class="diamond gold"
+          points="119.8,0 63.9,-34.5 8,0 63.9,34.5"/>
+      </a>
+    </g>
+
+    <path d="M130 520 Q300 545 470 520" class="divider"/>
+    <text x="300" y="585" text-anchor="middle" class="name">Haoxuan Lin</text>
+    <text x="300" y="555" text-anchor="middle" class="initials">HL</text>
+  </svg>
+  
   <footer>
     <p>Visit <a href="https://www.nyu.edu/">NYU main page</a> for more information.</p>
   </footer>
