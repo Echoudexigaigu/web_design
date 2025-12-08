@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Three Kingdoms – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body class="no-sidebar">
+  <main id="content" class="site-main">
+    <header class="section-header">
+      <h1 class="section-title">Introduction</h1>
+      <a class="btn btn--ghost" href="../index.html">Back</a>
+    </header>
+    <section class="hero" aria-labelledby="home-title">
+      <h1 id="home-title" class="hero__title">The Three Kingdoms Period and Chinese Ideology</h1>
+      <p class="hero__subtitle">From ancient rivalries to modern imagination.</p>
+    </section>
+
+    <section class="hero-body" aria-label="Overview Modules">
+      <figure class="hero-illustration">
+        <img src="images/map.gif" alt="Map" />
+        <figcaption class="visually-hidden">Map showing the three kingdoms</figcaption>
+      </figure>
+
+      <div class="card-grid">
+        <a class="card" href="./introduction/introduction.html">
+          <h3 class="card__title">Introduction</h3>
+          <p class="card__text">Background & key themes</p>
+        </a>
+        <a class="card" href="./the-three-kingdoms/the-three-kingdoms.html">
+          <h3 class="card__title">The Three Kingdoms</h3>
+          <p class="card__text">Wei · Shu · Wu</p>
+        </a>
+        <a class="card" href="./Work_in_progress/404.html">
+          <h3 class="card__title">Records & Literature</h3>
+          <p class="card__text">History vs. fiction</p>
+        </a>
+        <a class="card" href="./Work_in_progress/404.html">
+          <h3 class="card__title">Modern Culture</h3>
+          <p class="card__text">Games & TV dramas</p>
+        </a>
+        <a class="card" href="./Work_in_progress/404.html">
+          <h3 class="card__title">Ideological Adaptations</h3>
+          <p class="card__text">Across dynasties</p>
+        </a>
+      </div>
+    </section>
+    <!-- Daily quote + JS interactivity section -->
+    <section class="daily-section" aria-label="Daily Three Kingdoms quote">
+      <h2 class="daily-title">Daily Three Kingdoms Quote</h2>
+      <p class="daily-caption">
+        Each day shows a different line from the Three Kingdoms. You can also shuffle for another one.
+      </p>
+
+      <p id="daily-quote-text" class="daily-quote-text">
+      </p>
+
+      <div class="daily-actions">
+        <button id="random-quote-btn" class="btn btn--primary">
+          Show another quote
+        </button>
+        <button id="focus-mode-toggle" class="btn btn--ghost">
+          Toggle focus mode
+        </button>
+      </div>
+    </section>
+    <script src="./scripts/main.js"></script>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    © Steve Lin · CSCI-UA 0004 Web Design · The Three Kingdoms Project
+  </footer>
+</body>
+</html>

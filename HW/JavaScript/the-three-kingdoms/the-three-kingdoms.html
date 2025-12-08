@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Three Kingdoms – The Three States</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/styles.css"/>
+  <script src="../scripts/main.js" defer></script>
+</head>
+
+<body class="no-sidebar">
+  <header class="site-header" role="banner">
+    <a class="logo" href="../home_page.html">Three Kingdoms</a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="../introduction/introduction.html">Introduction</a></li>
+        <li class="is-active">
+          <a aria-current="page" href="./the-three-kingdoms.html">The Three States</a>
+        </li>
+        <li><a href="../Work_in_progress/404.html">Records &amp; Literature</a></li>
+        <li><a href="../Work_in_progress/404.html">Modern Culture</a></li>
+        <li><a href="../Work_in_progress/404.html">Ideology</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content" class="site-main">
+    <header class="section-header">
+      <h1 class="section-title">The Three States</h1>
+      <a class="btn btn--ghost" href="../home_page.html">Back</a>
+    </header>
+
+        <section class="daily-section" aria-label="Focus mode">
+      <div class="daily-actions">
+        <button id="focus-mode-toggle" class="btn btn--ghost">
+          Toggle focus mode
+        </button>
+      </div>
+    </section>
+    <script src="../../scripts/main.js"></script>
+
+    <section class="states-row" aria-label="Wei Shu Wu">
+      <a class="state-card state-wei" href="./Wei/Wei.html" aria-label="Wei">
+        <div class="state-cn">魏</div>
+        <div class="state-en">WEI</div>
+      </a>
+      <a class="state-card state-shu" href="./Shu/Shu.html" aria-label="Shu">
+        <div class="state-cn">蜀</div>
+        <div class="state-en">SHU</div>
+      </a>
+      <a class="state-card state-wu" href="./Wu/Wu.html" aria-label="Wu">
+        <div class="state-cn">吴</div>
+        <div class="state-en">WU</div>
+      </a>
+    </section>
+
+    <section class="survey-section" aria-label="Three Kingdoms survey">
+      <h2 class="survey-title">Three Kingdoms Survey</h2>
+      <p class="survey-intro">
+        Please answer a few questions about your favorite kingdom and character from the Three Kingdoms.
+      </p>
+
+      <form
+        class="survey-form"
+        action="https://formspree.io/f/xkgkyypk"
+        method="POST"
+      >
+        <div class="survey-group">
+          <label for="email">Your email (optional)</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+        </div>
+
+        <fieldset class="survey-group">
+          <legend>1. Which kingdom do you like the most?</legend>
+          <div class="survey-options">
+            <label>
+              <input type="radio" name="favorite_kingdom" value="Wei" required>
+              Wei
+            </label>
+            <label>
+              <input type="radio" name="favorite_kingdom" value="Shu">
+              Shu
+            </label>
+            <label>
+              <input type="radio" name="favorite_kingdom" value="Wu">
+              Wu
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-group">
+          <legend>2. Which character do you like the most, and why?</legend>
+
+          <label for="favorite_character">Choose your favorite character</label>
+          <select id="favorite_character" name="favorite_character" required>
+            <option value="" disabled selected>Select a character</option>
+            <option value="Liu Bei">Liu Bei</option>
+            <option value="Guan Yu">Guan Yu</option>
+            <option value="Zhuge Liang">Zhuge Liang</option>
+            <option value="Cao Cao">Cao Cao</option>
+            <option value="Sima Yi">Sima Yi</option>
+            <option value="Zhang Liao">Zhang Liao</option>
+            <option value="Sun Ce">Sun Ce</option>
+            <option value="Sun Quan">Sun Quan</option>
+            <option value="Zhou Yu">Zhou Yu</option>
+          </select>
+
+          <label for="character_reason">Why do you like this character?</label>
+          <textarea
+            id="character_reason"
+            name="character_reason"
+            rows="4"
+            placeholder="Explain why this character is your favorite."
+            required
+          ></textarea>
+        </fieldset>
+
+        <div class="survey-group">
+          <label for="overall_reason">
+            3. Why do you like this kingdom and character? (optional)
+          </label>
+          <textarea
+            id="overall_reason"
+            name="overall_reason"
+            rows="4"
+            placeholder="You can share any additional thoughts here."
+          ></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="Three Kingdoms survey response">
+
+        <button type="submit" class="survey-submit">
+          Submit survey
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    © Steve Lin · CSCI-UA 0004 Web Design · The Three Kingdoms Project
+  </footer>
+</body>
+</html>
