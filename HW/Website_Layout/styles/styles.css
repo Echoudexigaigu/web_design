@@ -1,0 +1,505 @@
+/* -----------------------------
+   1) Font & Resets
+----------------------------- */
+@font-face {
+  font-family: "InterVar";
+  src: url("fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root{
+  --bg:#fafafa;
+  --ink:#141418;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --card:#ffffff;
+  --accent:#0f766e;
+  --accent-ink:#ecfeff;
+  --radius:14px;
+  --gap:20px;
+  --max:1200px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family: InterVar, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height:1.6;
+}
+
+/* -----------------------------
+   2) Global Grid Layout
+   Areas: header | sidebar | main | footer
+----------------------------- */
+body{
+  display:grid;
+  grid-template-columns: 200px minmax(0,1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height:100dvh;
+}
+body.no-sidebar{
+  grid-template-columns: minmax(0,1fr);
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* -----------------------------
+   3) Header + Nav (Flex)
+----------------------------- */
+.site-header{
+  grid-area: header;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: var(--gap);
+  padding:16px 24px;
+  border-bottom:1px solid var(--line);
+  background:#fff;
+}
+.logo{
+  font-weight:800;
+  letter-spacing:.3px;
+  text-decoration:none;
+  color:var(--ink);
+}
+.main-nav .nav-list{
+  display:flex;               /* Flex 单轴：菜单 */
+  gap:16px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.main-nav a{
+  text-decoration:none;
+  color:var(--ink);
+  padding:8px 10px;
+  border-radius:8px;
+}
+.main-nav a:hover,
+.nav-list .is-active a,
+.main-nav a[aria-current="page"]{
+  background:var(--ink);
+  color:#fff;
+}
+
+/* -----------------------------
+   4) Sidebar
+----------------------------- */
+.site-sidebar{
+  grid-area: sidebar;
+  border-right:1px solid var(--line);
+  background:#fff;
+  padding:8px;
+  font-size: 14px; 
+}
+.side-list{
+  list-style:none;
+  margin:0; padding:0;
+  display:flex; flex-direction:column; gap:4px;
+  font-size: 14px;
+}
+.side-list a{
+  display:block;
+  padding:6px 8px;
+  color:var(--ink);
+  text-decoration:none;
+  border-radius:6px;
+  font-size: 14px;  
+}
+.side-list .is-active a,
+.side-list a:hover{ background:#f3f4f6; }
+
+/* -----------------------------
+   5) Main & Footer
+----------------------------- */
+.site-main{
+  grid-area: main;
+  max-width: var(--max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+}
+.site-footer{
+  grid-area: footer;
+  padding: 18px 24px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  background:#fff;
+}
+
+/* -----------------------------
+   6) Hero (Home)
+----------------------------- */
+.hero{
+  text-align:center;
+  margin: 12px auto 18px;
+}
+.hero__title{ 
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height:1.2;
+  margin:0 0 6px;
+}
+.hero__subtitle{ 
+  color:var(--muted); 
+  margin:0;
+}
+.hero-body {
+  display: flex;               
+  align-items: flex-start;     
+  justify-content: center;     
+  gap: 2rem;                  
+  flex-wrap: wrap;             
+  padding: 2rem;
+}
+
+.hero-illustration {
+  flex: 0 0 400px;             
+  background: #ddd;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.hero-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 520px;            
+}
+
+.card {
+  flex: 1 1 calc(50% - 8px);
+  min-width: 240px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
+  transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-4px); }
+
+@media (max-width: 768px) {
+  .hero-body { flex-direction: column; }
+  .hero-illustration { flex: none; width: 100%; }
+  .card-grid { max-width: 100%; }
+  .card { flex: 1 1 100%; }
+}
+
+
+/* -----------------------------
+   7) Section Header / Buttons
+----------------------------- */
+.section-header{
+  display:flex;               
+  justify-content:space-between;
+  align-items:center;
+  gap:var(--gap);
+  margin-bottom:14px;
+}
+.section-title{
+  margin:0;
+  font-size: clamp(22px, 3vw, 32px);
+}
+.btn{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn--ghost{
+  color:var(--ink);
+  border:1px solid var(--line);
+  background:#f3f4f6;
+}
+
+/* -----------------------------
+   8) Intro page (two columns)
+----------------------------- */
+.page-body.two-col{
+  display:grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--gap);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(16px, 2.2vw, 24px);
+}
+.page-body .media-right img{
+  width:100%; height:auto; display:block;
+  border-radius: 10px;
+  background:#ddd;
+}
+.col--full{ grid-column:1 / -1; }
+
+/* -----------------------------
+   9) Key Themes layout
+----------------------------- */
+.virtue-grid{
+  display: grid;
+  grid-template-columns: 120px 1fr; 
+  gap: var(--gap);
+  align-items: stretch;
+}
+
+.virtue-kanji{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: clamp(28px, 4.2vw, 40px); 
+  letter-spacing: .1em;
+  line-height: 1;
+  color: var(--ink);
+  height: 100%;
+}
+
+.virtue-explain{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(14px, 2vw, 18px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.virtue-explain h3{
+  margin:0 0 4px;
+  font-size: clamp(18px, 2.2vw, 22px);
+}
+.virtue-explain p{
+  margin:0;
+  color: var(--ink);
+}
+
+.theme-rows{ margin-top: var(--gap); }
+
+@media (max-width: 720px){
+  .virtue-grid{
+    grid-template-columns: 1fr;       
+    gap: 12px;
+  }
+  .virtue-kanji{ height:auto; padding:16px 0; }
+}
+
+/* =============================
+   The Three kingdoms page
+============================= */
+.kingdoms-row{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 24px;
+  padding: 18px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.kingdom-card{
+  scroll-snap-align: start;
+  flex: 0 0 clamp(240px, 28vw, 360px); 
+  height: clamp(160px, 24vw, 220px);
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.2);
+  background: #fff;
+  position: relative;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate; 
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.kingdom-cn{
+  font-weight: 900;
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: 1;
+  margin-bottom: 6px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.25);
+  letter-spacing: .06em;
+}
+.kingdom-en{
+  font-weight: 800;
+  font-size: clamp(18px, 2.2vw, 22px);
+  letter-spacing: .18em;
+  color: #f8fafc;
+  text-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+.kingdom-wei{
+  background: linear-gradient(135deg, #1e3a8a 0%, #0a246a 100%);
+}
+.kingdom-shu{
+  background: linear-gradient(135deg, #b91c1c 0%, #8a1111 100%);
+}
+.kingdom-wu{
+  background: linear-gradient(135deg, #065f46 0%, #044434 100%);
+}
+
+.kingdom-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.18), 0 0 0 2px rgba(255,255,255,.2) inset;
+  filter: saturate(1.1);
+}
+
+
+@media (max-width: 640px){
+  .kingdoms-row{
+    gap: 16px;
+    padding-inline: 12px;
+  }
+  .kingdom-card{
+    display: flex;
+    flex-basis: 82vw; 
+    height: 46vw;
+    color: inherit;
+  }
+}
+
+
+/* -----------------------------
+   10) Accessibility helpers
+----------------------------- */
+.visually-hidden{
+  position:absolute !important;
+  height:1px;width:1px;overflow:hidden;
+  clip:rect(1px,1px,1px,1px);
+  white-space:nowrap;border:0;padding:0;margin:-1px;
+}
+
+/* -----------------------------
+   11) Responsive
+----------------------------- */
+@media (max-width: 980px){
+  body{ grid-template-columns: 200px 1fr; }
+  .hero-body{ grid-template-columns: 1fr; }
+}
+@media (max-width: 720px){
+  body{ grid-template-columns: 1fr; grid-template-areas:
+    "header" "main" "footer"; }
+  .site-sidebar{ display:none; }
+  .page-body.two-col{ grid-template-columns: 1fr; }
+  .theme-rows{ grid-template-columns: 1fr; }
+}
+
+/* ===== Sidebar context navigation ===== */
+.side-title{
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.side-group{
+  margin: 8px 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+.side-group > summary{
+  cursor: pointer;
+  padding: 10px 12px;
+  font-weight: 700;
+  list-style: none;
+  outline: none;
+}
+.side-group[open] > summary{ background: #f8fafc; }
+.side-group__title::-webkit-details-marker{ display:none; }
+
+.side-list{
+  list-style: none;
+  margin: 0;
+  padding: 6px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.side-list a{
+  display:block;
+  padding:8px 10px;
+  border-radius:8px;
+  text-decoration:none;
+  color: var(--ink);
+}
+.side-list a:hover{ background:#f3f4f6; }
+.side-list .is-active > a,
+.side-list a[aria-current="page"]{
+  background: var(--ink);
+  color: #fff;
+}
+
+.side-caption{
+  display:block;
+  margin:8px 0 2px;
+  font-weight:700;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.side-sub{
+  list-style: none;
+  margin: 0 0 6px 10px;
+  padding: 0;
+  border-left: 2px solid var(--line);
+}
+.side-sub li a{
+  padding:6px 8px;
+  border-radius: 8px;
+}
+
+/* ===== Page TOC ===== */
+.side-toc{
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+.toc-list{
+  margin: 6px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+.toc-list a{
+  text-decoration:none;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 4px 4px;
+}
+.toc-list a:hover{ background:#f3f4f6; }
+
+/* ===== Prose helpers for Introduction content ===== */
+.prose h2{
+  margin: 18px 0 6px;
+  font-size: clamp(18px, 2.2vw, 22px);
+}
+.prose p{ margin: 0 0 10px; }
+
+@media (max-width: 720px){
+  .site-sidebar{ display:none; }
+}

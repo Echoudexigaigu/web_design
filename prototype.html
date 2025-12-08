@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My prototype webpage</title>
-    <style>
-        body {
-            background-color: lightblue;
-        }
-        h1 {
-            color: navy;
-            margin-top: 20px;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font: 40px;
-        }
-        p {
-            font-family: verdana;
-            font-size: 20px;
-        }
-        .p2{
-            margin-left: 40px;
-            color: plum;
-            text-shadow: 2px 2px 3px #ff0000;
-
-        }
-        .toUpperCase {
-            text-transform: uppercase;
-        }
-        .changeColor {
-            color: red;
-        }
-        #stx {
-            color: green;
-            font-size: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Math Example</title>
+  <!-- 引入 MathJax CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- 样式主题（可换成 github、atom-one-dark 等） -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<!-- highlight.js 核心脚本 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<!-- 自动初始化 -->
+<script>hljs.highlightAll();</script>
 </head>
-<body>        
-    <h1>
-        Hello, welcome to my prototype webpage.
-    </h1>
-    <p>
-        I am a student learning HTML. 
-    </p>
-    <p class="p2">
-        Click 
-        <a href="https://github.com/Echoudexigaigu">here</a>
-        to visit my personal Github.
-    </p>
-    <p class="p2 changeColor toUpperCase">
-        Click
-        <a href="https://www.kaggle.com/lhxsteve">here</a>
-        to visit my Kaggle dataset.
-    </p>
-    <stx id="stx">This is a stx element.</stx>        
+
+<body>
+
+<h2>Softargmax formula:</h2>
+
+<p>
+  Inline formula: 
+  \( \text{softargmax}(\mathbf{x}) = \frac{\exp(\mathbf{x})}{\sum_i \exp(x_i)} \)
+</p>
+
+<p>
+  Display (centered) formula:
+  \[
+  \text{softargmax}(\mathbf{x}) = \frac{\exp(\mathbf{x})}{\sum_i \exp(x_i)}
+  \]
+</p>
+
+<h3>Example: HTML + CSS + JavaScript</h3>
+
+<pre><code class="language-html">
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Demo</title>
+    </head>
+    <body>
+    <h1>Hello World!</h1>
+    </body>
+    </html>
+</code></pre>
+
+<pre><code class="language-css">
+body {
+  background-color: lavender;
+  font-family: Arial, sans-serif;
+}
+</code></pre>
+
+<pre><code class="language-javascript">
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+greet("Haoxuan");
+</code></pre>
+
+<pre><code class="language-python">
+def greet(name):
+    print(f"Hello, {name}!")    
+greet("Haoxuan")
+</code></pre>
+
 </body>
 </html>
