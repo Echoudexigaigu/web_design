@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haoxuan Lin — Contact</title>
+  <meta name="description" content="Contact information and links." />
+  <link rel="stylesheet" href="style/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Go to Home">Haoxuan Lin</a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn" id="themeToggle" type="button" aria-pressed="false">
+        Toggle theme
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <header class="page-head">
+      <h1>Contact</h1>
+      <p class="lead">Reach out for internships, research collaboration, or project discussions.</p>
+    </header>
+
+    <section class="card" aria-labelledby="contact-info">
+      <h2 id="contact-info">Contact Info</h2>
+
+      <ul class="meta">
+        <li><strong>Email:</strong> <a href="mailto:stevelinhaoxuan@gmail.com">stevelinhaoxuan@gmail.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+15169280156">(+1) 516-928-0156</a></li>
+      </ul>
+
+      <figure class="media">
+        <img
+          src="images/og-image.jpg"
+          srcset="images/og-image@2x.jpg 2x"
+          width="960"
+          height="540"
+          alt="Abstract banner image for the contact page"
+          loading="lazy"
+        />
+        <figcaption class="muted">Banner image (placeholder). Credit if needed.</figcaption>
+      </figure>
+
+      <p><a class="link" href="projects.html">← Back to Projects</a></p>
+    </section>
+
+    <section class="card" aria-labelledby="contact-form">
+      <h2 id="contact-form">Message (Optional)</h2>
+      <p class="muted">This form is optional for the assignment, but it demonstrates semantic form structure.</p>
+
+      <form class="form" action="#" method="post">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+
+        <button class="btn primary" id="formBtn" type="button">Preview message</button>
+        <p class="muted" id="formPreview" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Haoxuan Lin · <a href="#main">Back to top</a></p>
+  </footer>
+</body>
+</html>
